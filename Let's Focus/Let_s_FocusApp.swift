@@ -11,7 +11,7 @@ import SwiftUI
 struct Let_s_FocusApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LetsFocusTabView().environmentObject(TimerViewModel())
         }
     }
 }

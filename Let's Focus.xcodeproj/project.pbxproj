@@ -7,12 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF21D7862717ACBB0021E52F /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21D7852717ACBB0021E52F /* XDismissButton.swift */; };
+		AF21D7912717CB6C0021E52F /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF21D7902717CB6C0021E52F /* AlertItem.swift */; };
 		AFC2FBDE2715235200A8BAA3 /* Let_s_FocusApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FBDD2715235200A8BAA3 /* Let_s_FocusApp.swift */; };
-		AFC2FBE02715235200A8BAA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FBDF2715235200A8BAA3 /* ContentView.swift */; };
+		AFC2FBE02715235200A8BAA3 /* LetsFocusTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FBDF2715235200A8BAA3 /* LetsFocusTabView.swift */; };
 		AFC2FBE22715235500A8BAA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC2FBE12715235500A8BAA3 /* Assets.xcassets */; };
 		AFC2FBE52715235500A8BAA3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFC2FBE42715235500A8BAA3 /* Preview Assets.xcassets */; };
 		AFC2FBF02715235600A8BAA3 /* Let_s_FocusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FBEF2715235600A8BAA3 /* Let_s_FocusTests.swift */; };
 		AFC2FBFB2715235600A8BAA3 /* Let_s_FocusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FBFA2715235600A8BAA3 /* Let_s_FocusUITests.swift */; };
+		AFC2FC092715244000A8BAA3 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC082715244000A8BAA3 /* TimerView.swift */; };
+		AFC2FC0B2715244E00A8BAA3 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC0A2715244E00A8BAA3 /* SettingView.swift */; };
+		AFC2FC0D2715245C00A8BAA3 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC0C2715245C00A8BAA3 /* AccountView.swift */; };
+		AFC2FC0F271527EA00A8BAA3 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC0E271527EA00A8BAA3 /* TimerModel.swift */; };
+		AFC2FC1127152D5E00A8BAA3 /* Ext+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC1027152D5E00A8BAA3 /* Ext+Color.swift */; };
+		AFC2FC132715425900A8BAA3 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC122715425900A8BAA3 /* TimerViewModel.swift */; };
+		AFC2FC152716779900A8BAA3 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC2FC142716779900A8BAA3 /* StartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF21D7852717ACBB0021E52F /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
+		AF21D7902717CB6C0021E52F /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		AFC2FBDA2715235200A8BAA3 /* Let's Focus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's Focus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC2FBDD2715235200A8BAA3 /* Let_s_FocusApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Let_s_FocusApp.swift; sourceTree = "<group>"; };
-		AFC2FBDF2715235200A8BAA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AFC2FBDF2715235200A8BAA3 /* LetsFocusTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetsFocusTabView.swift; sourceTree = "<group>"; };
 		AFC2FBE12715235500A8BAA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AFC2FBE42715235500A8BAA3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AFC2FBE62715235500A8BAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +56,13 @@
 		AFC2FBF62715235600A8BAA3 /* Let's FocusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Let's FocusUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFC2FBFA2715235600A8BAA3 /* Let_s_FocusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Let_s_FocusUITests.swift; sourceTree = "<group>"; };
 		AFC2FBFC2715235600A8BAA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFC2FC082715244000A8BAA3 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		AFC2FC0A2715244E00A8BAA3 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		AFC2FC0C2715245C00A8BAA3 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		AFC2FC0E271527EA00A8BAA3 /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		AFC2FC1027152D5E00A8BAA3 /* Ext+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Color.swift"; sourceTree = "<group>"; };
+		AFC2FC122715425900A8BAA3 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		AFC2FC142716779900A8BAA3 /* StartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF21D7872717C22E0021E52F /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FBDF2715235200A8BAA3 /* LetsFocusTabView.swift */,
+				AF21D7882717C24B0021E52F /* TimerView */,
+				AF21D7892717C2600021E52F /* SettingView */,
+				AF21D78E2717C2C50021E52F /* AccountView */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AF21D7882717C24B0021E52F /* TimerView */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FC122715425900A8BAA3 /* TimerViewModel.swift */,
+				AFC2FC082715244000A8BAA3 /* TimerView.swift */,
+			);
+			path = TimerView;
+			sourceTree = "<group>";
+		};
+		AF21D7892717C2600021E52F /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FC0A2715244E00A8BAA3 /* SettingView.swift */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		AF21D78A2717C2780021E52F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FC0E271527EA00A8BAA3 /* TimerModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF21D78B2717C28C0021E52F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FC1027152D5E00A8BAA3 /* Ext+Color.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AF21D78C2717C2A50021E52F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF21D78D2717C2B20021E52F /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF21D78D2717C2B20021E52F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				AF21D7852717ACBB0021E52F /* XDismissButton.swift */,
+				AFC2FC142716779900A8BAA3 /* StartButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		AF21D78E2717C2C50021E52F /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				AFC2FC0C2715245C00A8BAA3 /* AccountView.swift */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		AF21D78F2717CB510021E52F /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				AF21D7902717CB6C0021E52F /* AlertItem.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		AFC2FBD12715235200A8BAA3 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +191,11 @@
 			isa = PBXGroup;
 			children = (
 				AFC2FBDD2715235200A8BAA3 /* Let_s_FocusApp.swift */,
-				AFC2FBDF2715235200A8BAA3 /* ContentView.swift */,
+				AF21D7872717C22E0021E52F /* Screens */,
+				AF21D78A2717C2780021E52F /* Models */,
+				AF21D78C2717C2A50021E52F /* Views */,
+				AF21D78B2717C28C0021E52F /* Extensions */,
+				AF21D78F2717CB510021E52F /* Alerts */,
 				AFC2FBE12715235500A8BAA3 /* Assets.xcassets */,
 				AFC2FBE62715235500A8BAA3 /* Info.plist */,
 				AFC2FBE32715235500A8BAA3 /* Preview Content */,
@@ -259,8 +358,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFC2FBE02715235200A8BAA3 /* ContentView.swift in Sources */,
+				AF21D7912717CB6C0021E52F /* AlertItem.swift in Sources */,
+				AFC2FC0F271527EA00A8BAA3 /* TimerModel.swift in Sources */,
+				AFC2FC092715244000A8BAA3 /* TimerView.swift in Sources */,
+				AFC2FC0B2715244E00A8BAA3 /* SettingView.swift in Sources */,
+				AFC2FC1127152D5E00A8BAA3 /* Ext+Color.swift in Sources */,
+				AFC2FC132715425900A8BAA3 /* TimerViewModel.swift in Sources */,
+				AFC2FBE02715235200A8BAA3 /* LetsFocusTabView.swift in Sources */,
+				AFC2FC152716779900A8BAA3 /* StartButton.swift in Sources */,
 				AFC2FBDE2715235200A8BAA3 /* Let_s_FocusApp.swift in Sources */,
+				AFC2FC0D2715245C00A8BAA3 /* AccountView.swift in Sources */,
+				AF21D7862717ACBB0021E52F /* XDismissButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
