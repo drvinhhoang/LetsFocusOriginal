@@ -41,7 +41,7 @@ struct SettingView: View {
                                 Text(String($0))
                             }
                         }
-                        .pickerStyle(WheelPickerStyle())
+                        
                     }
                 }
                 .background(Color.backgroundLightColor)

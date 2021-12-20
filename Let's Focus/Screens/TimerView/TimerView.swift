@@ -41,6 +41,7 @@ struct TimerView: View {
                             print("Dismiss Tapped!")
                         } label: {
                             XDismissButton()
+                            
                         }, alignment: .topTrailing)
                 } else {
                     TimerCicle(second: timerViewmodel.timerModel.seconds, primaryColor: timerViewmodel.setTimerColor().primary, secondaryColor: timerViewmodel.setTimerColor().secondary)
