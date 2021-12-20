@@ -10,18 +10,24 @@ import SwiftUI
 class TimerViewModel: ObservableObject {
     
     @AppStorage("setting") private var timerSetting: Data?
-    @Published var timerModel        = TimerModel.defaultTimeModel
+    @Published var pomoTimer        = TimerModel.defaultTimeModel
     @Published var tempTimerModel    = TimerModel.defaultTimeModel
+    #warning("6")
     @Published var isRunning         = false
+    #warning("5")
     @Published var section: Int      = 0
+    #warning("7")
     @Published var isBreakTime: Bool = false
+    #warning("8")
     @Published var isLongBreak: Bool = false
+    
+    
     @Published var alertItem: AlertItem?
     
     private var timer = Timer()
 
     func saveChanges() {
-        let data = try? JSONEncoder().encode(timerModel)
+        let data = try? JSONEncoder().encode(pomoTimer)
         timerSetting = data
         alertItem = AlertContext.saveSuccessful
     }
@@ -29,7 +35,7 @@ class TimerViewModel: ObservableObject {
     func retrieveSetting() {
         guard let timerSetting = timerSetting else { return}
         do { let temp = try JSONDecoder().decode(TimerModel.self, from: timerSetting)
-            timerModel = temp
+            pomoTimer = temp
             tempTimerModel = temp
         } catch {
             
@@ -38,11 +44,11 @@ class TimerViewModel: ObservableObject {
     }
     
     func updateTimeSetting() {
-        timerModel = tempTimerModel
+        pomoTimer = tempTimerModel
         
     }
     
-    
+    #warning("1")
     // Set color for timerView's timer
     func setTimerColor() -> (primary: Color, secondary: Color) {
         if isBreakTime {
@@ -52,13 +58,15 @@ class TimerViewModel: ObservableObject {
         }
     }
     
+    
+    #warning("2")
     func startTimer() {
         
             isRunning.toggle()
             if isRunning {
                 timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {[self] time in
-                    timerModel.seconds -= 1
-                    if timerModel.seconds <= 0 {
+                    pomoTimer.seconds -= 1
+                    if pomoTimer.seconds <= 0 {
                         time.invalidate()
                         isRunning = false
                         // when senconds to 0, change to breaking time
@@ -75,11 +83,15 @@ class TimerViewModel: ObservableObject {
    
     }
     
+    
+    #warning("3")
     func stopTimer() {
         timer.invalidate()
         isRunning = false
     }
     
+    
+    #warning("4")
     func setBreakTime() {
         if isBreakTime {
             if section % 4 == 0 && section > 0 {
@@ -90,13 +102,13 @@ class TimerViewModel: ObservableObject {
             }
             
             if isLongBreak {
-                timerModel.seconds = timerModel.longBreak * 60
+                pomoTimer.seconds = pomoTimer.longBreak * 60
             } else {
-                timerModel.seconds = timerModel.shortBreak * 60
+                pomoTimer.seconds = pomoTimer.shortBreak * 60
             }
             
         } else {
-            timerModel.seconds = timerModel.focusTime * 60
+            pomoTimer.seconds = pomoTimer.focusTime * 60
         }
     }
     
@@ -104,7 +116,7 @@ class TimerViewModel: ObservableObject {
     
     func setTimeWhenXDismissPressed() {
         stopTimer()
-        timerModel.seconds = tempTimerModel.seconds
+        pomoTimer.seconds = tempTimerModel.seconds
         isBreakTime = false
     }
     
