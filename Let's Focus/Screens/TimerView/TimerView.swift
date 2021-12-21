@@ -28,12 +28,7 @@ struct TimerView: View {
                 .padding(.bottom, 40)
                 
                 if timerManager.isRunning || (!timerManager.isRunning && timerManager.isBreakTime) || (!timerManager.isRunning && timerManager.seconds < timerManager.seconds) {
-                    // Explain code above:
-                    // Only display XDismissButton when:
-                    // - timer is running
-                    // - Timer is not running but in breaktime
-                    // - Timer is stopped in focus mode (current seconds < total seconds, total seconds is tempTimerModel's seconds)
-                    
+
                     TimerCicle(second: timerManager.seconds, primaryColor: timerManager.setTimerColor().primary, secondaryColor: timerManager.setTimerColor().secondary)
                         .overlay(Button {
                             timerManager.resetTimer()
@@ -91,13 +86,12 @@ struct TimerCicle: View {
                 Text(String(format: "%02d", second % 60))
             }
             .font(.largeTitle)
-        }
+        } // ZStack
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
-        
+        TimerView()      
     }
 }

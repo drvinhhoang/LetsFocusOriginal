@@ -10,12 +10,12 @@ import SwiftUI
 struct SettingView: View {  
     @EnvironmentObject var timerManager: TimerManager
     
-    var focusTime = 1...50
-    var shortBreak = [5, 10, 15, 20, 25, 30]
-    var longBreak = [ 5, 10, 15, 20, 25, 30]
-    var sections = 1...20
+    private var focusTime = 1...50
+    private var shortBreak = [5, 10, 15, 20, 25, 30]
+    private var longBreak = [ 5, 10, 15, 20, 25, 30]
+    private var sections = 1...20
     
-    var body: some View {    
+    var body: some View {
         NavigationView {
             VStack {
                 Form {
@@ -40,7 +40,6 @@ struct SettingView: View {
                                 Text(String($0))
                             }
                         }
-
                     }
                 }
                 .background(Color.backgroundLightColor)
@@ -51,7 +50,7 @@ struct SettingView: View {
                 timerManager.saveChanges()
             } label: {
                 Text("Save")
-                    .foregroundColor(.red)            }
+                .foregroundColor(.red)            }
             )
             .alert(item: $timerManager.alertItem) { alertItem in
                 Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)

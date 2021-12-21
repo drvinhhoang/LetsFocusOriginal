@@ -9,24 +9,26 @@ import SwiftUI
 
 class TimerManager: ObservableObject {
     
+    
     @Published var timerSetting      = TimerSetting.shared {
         didSet {
             setSeconds()
         }
     }
-    
+   
     @Published var tempSetting: TimerSetting  = TimerSetting.shared
     @Published var isRunning                  = false
     @Published var section: Int               = 0
     @Published var isBreakTime: Bool          = false
     @Published var isLongBreak: Bool          = false
     @Published var seconds: Int               = TimerSetting.shared.focusTime * 60
+    
     @Published var alertItem: AlertItem?
-    
+ 
     private var timer = Timer()
-    
+
     func updateTimeSetting() {
-        self.timerSetting = tempSetting
+       self.timerSetting = tempSetting
         self.seconds = timerSetting.focusTime * 60
     }
     
@@ -43,7 +45,7 @@ class TimerManager: ObservableObject {
             self.tempSetting = timerSetting
         }
     }
-    
+
     // Set color for timerView's timer
     func setTimerColor() -> (primary: Color, secondary: Color) {
         if isBreakTime {
@@ -52,34 +54,36 @@ class TimerManager: ObservableObject {
             return (.brandPrimary, .secondaryBrand)
         }
     }
-    
+ 
     func startTimer() {
-        isRunning.toggle()
-        if isRunning {
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {[self] time in
-                seconds -= 60
-                if seconds <= 0 {
-                    time.invalidate()
-                    isRunning = false
-                    // when senconds to 0, change to breaking time
-                    if !isBreakTime {
-                        section += 1
+            isRunning.toggle()
+            if isRunning {
+                timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) {[self] time in
+                    seconds -= 60
+                    if seconds <= 0 {
+                        time.invalidate()
+                        isRunning = false
+                        // when senconds to 0, change to breaking time
+                        if !isBreakTime {
+                            section += 1
+                        }
+                        isBreakTime.toggle()
+                        setSeconds()
                     }
-                    isBreakTime.toggle()
-                    setSeconds()
                 }
+            } else {
+                timer.invalidate()
             }
-        } else {
-            timer.invalidate()
-        }
     }
+    
     
     func stopTimer() {
         timer.invalidate()
         isRunning = false
     }
     
-    private func setSeconds() {
+    
+    func setSeconds() {
         if isBreakTime {
             if section % 4 == 0 && section > 0 {
                 isLongBreak = true
@@ -98,11 +102,14 @@ class TimerManager: ObservableObject {
             seconds = timerSetting.focusTime * 60
         }
     }
+
     
     func resetTimer() {
         stopTimer()
         seconds = tempSetting.focusTime * 60
         isBreakTime = false
     }
+    
+    
     
 }
